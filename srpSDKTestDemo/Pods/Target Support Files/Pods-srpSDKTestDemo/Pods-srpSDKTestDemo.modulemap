@@ -1,0 +1,6 @@
+module Pods_srpSDKTestDemo {
+  umbrella header "Pods-srpSDKTestDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
