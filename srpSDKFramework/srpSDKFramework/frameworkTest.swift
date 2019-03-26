@@ -8,6 +8,10 @@
 
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import BigInt
+import Cryptor
 
 // MARK: 自定义的一个首页视图
 public class YLXHomeView: UIView {
@@ -15,7 +19,14 @@ public class YLXHomeView: UIView {
     override public init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-        layout()
+        
+        let cid = "8aac99bfdff6870b28f74fcfb191a2e9"
+        let salt = "eab7276e67ff445f96d3a995578c0c00"
+        let phone = "13818120453"
+        
+        let srp = srpLink()
+        srp.srpRegister(cid: cid, salt: salt, phone: phone)
+        
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -27,15 +38,11 @@ public class YLXHomeView: UIView {
         addSubview(iconImgV)
     }
     
-    // 布局页面
-    func layout() {
-        iconImgV.frame = CGRect.init(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
-    }
-    
     lazy var iconImgV: UIImageView = {
         let view = UIImageView.init()
         view.backgroundColor = UIColor.red
         return view
     }()
+    
     
 }

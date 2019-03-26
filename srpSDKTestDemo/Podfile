@@ -2,9 +2,8 @@
 workspace 'srpSDK'
 
 def shared_pods
-    pod 'Alamofire', '~> 4.7.2'
     pod 'SwiftyJSON', '~> 4.1.0'
-
+    pod 'Alamofire', '~> 4.7.2'
     pod 'BigInt', '~> 3.1'
     pod 'BlueCryptor'
 end

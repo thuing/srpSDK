@@ -12,9 +12,9 @@
 		654F3B262240D5BD00336EE9 /* srpSDKFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F3B252240D5BD00336EE9 /* srpSDKFrameworkTests.swift */; };
 		654F3B282240D5BD00336EE9 /* srpSDKFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 654F3B1A2240D5BD00336EE9 /* srpSDKFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		654F3BF82240D79800336EE9 /* srpLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F3BF72240D79800336EE9 /* srpLink.swift */; };
-		654F3BFA2240DC9600336EE9 /* srpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F3BF92240DC9600336EE9 /* srpUtil.swift */; };
-		654F3BFC2240DFB300336EE9 /* frameworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F3BFB2240DFB300336EE9 /* frameworkTest.swift */; };
-		654F3BFD2240E30200336EE9 /* frameworkTest.swift in Headers */ = {isa = PBXBuildFile; fileRef = 654F3BFB2240DFB300336EE9 /* frameworkTest.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		654F3BFA2240DC9600336EE9 /* TTSRPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F3BF92240DC9600336EE9 /* TTSRPUtil.swift */; };
+		65FFEE442249D05B00338C0F /* TTAIChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FFEE432249D05B00338C0F /* TTAIChain.swift */; };
+		65FFEE472249D0E900338C0F /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FFEE462249D0E900338C0F /* KeychainSwiftDistrib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +37,9 @@
 		654F3B252240D5BD00336EE9 /* srpSDKFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = srpSDKFrameworkTests.swift; sourceTree = "<group>"; };
 		654F3B272240D5BD00336EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654F3BF72240D79800336EE9 /* srpLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = srpLink.swift; sourceTree = "<group>"; };
-		654F3BF92240DC9600336EE9 /* srpUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = srpUtil.swift; sourceTree = "<group>"; };
-		654F3BFB2240DFB300336EE9 /* frameworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frameworkTest.swift; sourceTree = "<group>"; };
+		654F3BF92240DC9600336EE9 /* TTSRPUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSRPUtil.swift; sourceTree = "<group>"; };
+		65FFEE432249D05B00338C0F /* TTAIChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTAIChain.swift; sourceTree = "<group>"; };
+		65FFEE462249D0E900338C0F /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = "<group>"; };
 		E63E05C2432401DD2C8DCF5B /* Pods-srpSDKFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srpSDKFramework.release.xcconfig"; path = "Target Support Files/Pods-srpSDKFramework/Pods-srpSDKFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,11 +86,12 @@
 		654F3B192240D5BD00336EE9 /* srpSDKFramework */ = {
 			isa = PBXGroup;
 			children = (
+				65FFEE452249D0E900338C0F /* keychainswift */,
 				654F3B1A2240D5BD00336EE9 /* srpSDKFramework.h */,
 				654F3B1B2240D5BD00336EE9 /* Info.plist */,
 				654F3BF72240D79800336EE9 /* srpLink.swift */,
-				654F3BF92240DC9600336EE9 /* srpUtil.swift */,
-				654F3BFB2240DFB300336EE9 /* frameworkTest.swift */,
+				654F3BF92240DC9600336EE9 /* TTSRPUtil.swift */,
+				65FFEE432249D05B00338C0F /* TTAIChain.swift */,
 			);
 			path = srpSDKFramework;
 			sourceTree = "<group>";
@@ -101,6 +103,14 @@
 				654F3B272240D5BD00336EE9 /* Info.plist */,
 			);
 			path = srpSDKFrameworkTests;
+			sourceTree = "<group>";
+		};
+		65FFEE452249D0E900338C0F /* keychainswift */ = {
+			isa = PBXGroup;
+			children = (
+				65FFEE462249D0E900338C0F /* KeychainSwiftDistrib.swift */,
+			);
+			path = keychainswift;
 			sourceTree = "<group>";
 		};
 		F02E8E904CEB5C054DE6FF7D /* Pods */ = {
@@ -129,7 +139,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				654F3B282240D5BD00336EE9 /* srpSDKFramework.h in Headers */,
-				654F3BFD2240E30200336EE9 /* frameworkTest.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,9 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654F3BFC2240DFB300336EE9 /* frameworkTest.swift in Sources */,
 				654F3BF82240D79800336EE9 /* srpLink.swift in Sources */,
-				654F3BFA2240DC9600336EE9 /* srpUtil.swift in Sources */,
+				654F3BFA2240DC9600336EE9 /* TTSRPUtil.swift in Sources */,
+				65FFEE442249D05B00338C0F /* TTAIChain.swift in Sources */,
+				65FFEE472249D0E900338C0F /* KeychainSwiftDistrib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +439,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = Fuu.srpSDKFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.srpSDKFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -459,7 +469,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = Fuu.srpSDKFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.srpSDKFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;

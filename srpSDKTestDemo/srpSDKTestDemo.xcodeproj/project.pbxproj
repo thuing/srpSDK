@@ -14,7 +14,7 @@
 		654F3BD42240D68900336EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654F3BD22240D68900336EE9 /* LaunchScreen.storyboard */; };
 		654F3BDF2240D68900336EE9 /* srpSDKTestDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F3BDE2240D68900336EE9 /* srpSDKTestDemoTests.swift */; };
 		654F3BEA2240D68900336EE9 /* srpSDKTestDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F3BE92240D68900336EE9 /* srpSDKTestDemoUITests.swift */; };
-		654F3C002240E48700336EE9 /* srpSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654F3BFF2240E48700336EE9 /* srpSDKFramework.framework */; };
+		659EE5B722447EF8006AD798 /* srpSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659EE5B622447EF8006AD798 /* srpSDKFramework.framework */; };
 		C096102F65F509E96639C457 /* libPods-srpSDKTestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41016BAD2B9BFCB69487F081 /* libPods-srpSDKTestDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +51,7 @@
 		654F3BE52240D68900336EE9 /* srpSDKTestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = srpSDKTestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654F3BE92240D68900336EE9 /* srpSDKTestDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = srpSDKTestDemoUITests.swift; sourceTree = "<group>"; };
 		654F3BEB2240D68900336EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		654F3BFF2240E48700336EE9 /* srpSDKFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = srpSDKFramework.framework; path = "../../../Library/Developer/Xcode/DerivedData/srpSDK-dznyyzbkiqkbplcxcyfszuawavcc/Build/Products/Debug-iphoneos/srpSDKFramework.framework"; sourceTree = "<group>"; };
-		654F3C022240E52900336EE9 /* srpSDKFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = srpSDKFramework.framework; sourceTree = "<group>"; };
+		659EE5B622447EF8006AD798 /* srpSDKFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = srpSDKFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/srpSDK-dznyyzbkiqkbplcxcyfszuawavcc/Build/Products/Debug-iphoneos/srpSDKFramework.framework"; sourceTree = "<group>"; };
 		898BBB26D2075B134340A621 /* Pods-srpSDKTestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srpSDKTestDemo.debug.xcconfig"; path = "Target Support Files/Pods-srpSDKTestDemo/Pods-srpSDKTestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654F3C002240E48700336EE9 /* srpSDKFramework.framework in Frameworks */,
+				659EE5B722447EF8006AD798 /* srpSDKFramework.framework in Frameworks */,
 				C096102F65F509E96639C457 /* libPods-srpSDKTestDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +106,6 @@
 				654F3BDD2240D68900336EE9 /* srpSDKTestDemoTests */,
 				654F3BE82240D68900336EE9 /* srpSDKTestDemoUITests */,
 				654F3BC72240D68800336EE9 /* Products */,
-				654F3BFF2240E48700336EE9 /* srpSDKFramework.framework */,
 				37C26A1A5BE6578E226AE956 /* Pods */,
 				55F7FB14097E99DE7CA8E942 /* Frameworks */,
 			);
@@ -126,7 +124,7 @@
 		654F3BC82240D68800336EE9 /* srpSDKTestDemo */ = {
 			isa = PBXGroup;
 			children = (
-				654F3C022240E52900336EE9 /* srpSDKFramework.framework */,
+				659EE5B622447EF8006AD798 /* srpSDKFramework.framework */,
 				654F3BC92240D68800336EE9 /* AppDelegate.swift */,
 				654F3BCB2240D68800336EE9 /* ViewController.swift */,
 				654F3BCD2240D68800336EE9 /* Main.storyboard */,
