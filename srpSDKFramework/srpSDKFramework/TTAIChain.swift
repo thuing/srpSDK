@@ -56,8 +56,6 @@ public class TTAIChain {
     // MARK: - 私有方法
     
     /// 创建uuid值
-    /// 6da13cc6ae084f5ea4be6d20892c97fa
-    /// 1a870ef59c904641969f33c9e142b0ae 6s
     
     func getValueForKey(key: String, userDefaults: Bool, keychain: Bool, accessGroup: String?,synchronizable: Bool) -> String? {
         

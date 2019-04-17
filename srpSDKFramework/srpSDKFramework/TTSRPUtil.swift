@@ -37,11 +37,56 @@ public class TTSRPUtil {
     
     let TABLE:Array<Any> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ".", "/"]
     
+    public func stringToArrayStr(input:String) -> Array<String> {
+        return  input.map { String($0) }
+    }
     
-    enum Error01:Error{
-        case Error01NoFile
-        case Error01NoContent
-        case Error01ContentNotAvailable
+    func convertToASCII(str:String) -> UInt32{
+        var number:UInt32 = 0
+        for code in str.unicodeScalars {
+            number = code.value
+        }
+        return number
+    }
+    
+    
+    /**
+     * 两个字符串的异或
+     * @Param str1
+     * @Param str2
+     * @return String(xorstr)
+     */
+    
+    public func twoStringXor(str1:String,str2:String) -> String{
+        let b1 = stringToArrayStr(input: str1)
+        let b2 = stringToArrayStr(input: str2)
+        var longbytes:[String] = []
+        var shortbytes:[String] = []
+        
+        if(b1.count >= b2.count){
+            longbytes = b1
+            shortbytes = b2
+        }else{
+            longbytes = b2
+            shortbytes = b1
+        }
+        
+        var xorstr = [Character](repeating: "0", count: longbytes.count)
+        
+        var i = 0
+        for _ in 0..<shortbytes.count{
+            let shortNumber = convertToASCII(str: shortbytes[i])
+            let longNumber = convertToASCII(str: longbytes[i])
+            xorstr[i] = Character(UnicodeScalar(shortNumber^longNumber)!)
+            i = i + 1
+            
+        }
+        for _ in i..<longbytes.count{
+            xorstr[i] = Character(UnicodeScalar(convertToASCII(str: longbytes[i]))!)
+        }
+        
+        let newStr = String(xorstr)
+        return newStr
     }
     
     // 无符号右移 >>>
@@ -90,7 +135,7 @@ public class TTSRPUtil {
         var var4:Int = 0
         var var5:Int = 0
         if (var1 == 0) {
-            throw Error01.Error01NoFile
+            fatalError("The String is Nil")
         } else {
             for var4 in var4..<var1 {
                 let var3 :String = var0Array[var4] as! String
@@ -294,3 +339,10 @@ extension Digest {
     }
 }
 
+// 常量
+// UserDefault
+let uIsLogin = "isLogin"
+let utoken = "TTAItoken"
+let uSDKSRP = "TTAISdkSrpS"
+let uStableParam = "TTAIStableParam"
+let uChangeParam = "TTAIChangeParam"
